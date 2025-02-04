@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="/favicon.png" type="image/png">
+  <title>Launch Project: Register</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script type="module" src="/js/index.js"></script>
+</head>
+
+<body>
+  <div class="auth-container">
+    <div class="auth-block">
+      <h1 class="auth-block__title">Launch Project: Register</h1>
+      <form class="auth-form register">
+        <div class="auth-form__group">
+          <label for="username" class="auth-form__label">Your username:</label>
+          <input type="text" id="username" class="auth-form__control" required>
+        </div>
+        <div class="auth-form__group">
+          <label for="password" class="auth-form__label">Your password:</label>
+          <input type="password" id="password" class="auth-form__control" required>
+        </div>
+        <div class="auth-form__group">
+          <label for="repeat-password" class="auth-form__label">Confirm your password:</label>
+          <input type="password" id="repeat-password" class="auth-form__control" required>
+        </div>
+        <div class="auth-form__group">
+          <label for="age" class="auth-form__label">Your age:</label>
+          <input type="number" id="age" class="auth-form__control" required>
+        </div>
+        <div class="auth-form__group">
+          <button type="submit" class="button">Register</button>
+        </div>
+        <div class="auth-form__group">
+          <p class="auth-form__text">Do you already have an account? <a href="/login" class="auth-form__link">Login</a>
+          </p>
+        </div>
+      </form>
+      <p class="error"></p>
+    </div>
+  </div>
+</body>
+
+</html>
