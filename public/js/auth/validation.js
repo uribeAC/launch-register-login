@@ -9,8 +9,8 @@ export const isValidUsername = (username) => {
 export const isValidPassword = (password) => {
   let isValid;
 
-  const regexpLength = /[a-zA-Z0-9]{8,}/g;
-  const regexpUpper = /[A-Z]/g;
+  const regexpLength = /[a-ñA-Ñ0-9À-ú]{8,}/g;
+  const regexpUpper = /[A-ÑÀ-Ú]/g;
   const regexpNumber = /[0-9]/g;
 
   const passwordLength = regexpLength.test(password);
