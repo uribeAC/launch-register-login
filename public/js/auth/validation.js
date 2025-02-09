@@ -1,7 +1,8 @@
 export const isValidUsername = (username) => {
   let isValid;
 
-  isValid = username.length >= 5;
+  const minimumUsernameLength = 5;
+  isValid = username.length >= minimumUsernameLength;
 
   return isValid;
 };
@@ -9,15 +10,15 @@ export const isValidUsername = (username) => {
 export const isValidPassword = (password) => {
   let isValid;
 
-  const regexpLength = /[a-ñA-Ñ0-9À-ú]{8,}/g;
-  const regexpUpper = /[A-ÑÀ-Ú]/g;
-  const regexpNumber = /[0-9]/g;
+  const upperCaseRegEx = /[A-ZÀ-Ú]/g;
+  const numberRegEx = /[0-9]/g;
 
-  const passwordLength = regexpLength.test(password);
-  const passwordUpper = regexpUpper.test(password);
-  const passwordNumber = regexpNumber.test(password);
+  const minimumPasswordLength = 8;
+  const hasPasswordLength = password.length >= minimumPasswordLength;
+  const hasPasswordUpperCase = upperCaseRegEx.test(password);
+  const hasPasswordNumber = numberRegEx.test(password);
 
-  isValid = passwordLength && passwordNumber && passwordUpper;
+  isValid = hasPasswordLength && hasPasswordNumber && hasPasswordUpperCase;
 
   return isValid;
 };
@@ -33,7 +34,8 @@ export const isSamePassword = (password1, password2) => {
 export const isAdultAge = (age) => {
   let isAdult;
 
-  isAdult = Number(age) >= 18;
+  const minimumAdultAge = 18;
+  isAdult = age >= minimumAdultAge;
 
   return isAdult;
 };
